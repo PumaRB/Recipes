@@ -12,7 +12,9 @@ struct Categorie {
     
     static func getCategories() -> [Categorie] {
         [
-        Categorie(name: "Salad", img: "salads"),
+        Categorie(name: "Salads", img: "salads"),
+        Categorie(name: "Main dishes", img: "mainDishes"),
+        Categorie(name: "Desserts", img: "deserts"),
         ]
     }
     

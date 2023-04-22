@@ -3,6 +3,8 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,6 +108,77 @@
             </objects>
             <point key="canvasLocation" x="280" y="1617"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="e1o-VV-Qzy">
+            <objects>
+                <collectionViewController id="h6l-H8-eQh" customClass="CollectionViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="43r-3K-Sec">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LmA-MU-oYi">
+                            <size key="itemSize" width="360" height="128"/>
+                            <size key="estimatedItemSize" width="360" height="128"/>
+                            <size key="headerReferenceSize" width="32" height="0.0"/>
+                            <size key="footerReferenceSize" width="32" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="12" maxX="16" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="card" id="BrQ-g5-5jd">
+                                <rect key="frame" x="16" y="12" width="358" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SFQ-3z-gPe" userLabel="tile" customClass="CollectionViewCell" customModule="Recipes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RL-Gg-zgJ">
+                                            <rect key="frame" x="113" y="51.666666666666657" width="54" height="25"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salads" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-D3-cXV">
+                                            <rect key="frame" x="25" y="32" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Esx-qS-kZB"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Raz-LD-z6R"/>
+                                                <constraint firstAttribute="width" constant="64" id="Wlr-D0-01b"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="lbI-si-u2W"/>
+                                                <constraint firstAttribute="height" constant="64" id="vIa-0P-Omx"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.41568627450000001" green="0.83921568629999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="vTr-D3-cXV" firstAttribute="leading" secondItem="SFQ-3z-gPe" secondAttribute="leading" constant="25" id="4TT-Tg-oSm"/>
+                                        <constraint firstItem="2RL-Gg-zgJ" firstAttribute="centerY" secondItem="SFQ-3z-gPe" secondAttribute="centerY" id="9aT-5y-rc6"/>
+                                        <constraint firstItem="vTr-D3-cXV" firstAttribute="centerY" secondItem="SFQ-3z-gPe" secondAttribute="centerY" id="HQl-2i-mpP"/>
+                                        <constraint firstItem="2RL-Gg-zgJ" firstAttribute="leading" secondItem="vTr-D3-cXV" secondAttribute="trailing" constant="24" id="dUH-d8-rj9"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="358" height="128"/>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5d7-Zh-tVK">
+                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uuN-dc-wgc">
+                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="h6l-H8-eQh" id="0Sn-8l-HVh"/>
+                            <outlet property="delegate" destination="h6l-H8-eQh" id="zig-Pu-pu8"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="jOi-4H-6ob"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnI-dj-QOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="1616.5876777251185"/>
+        </scene>
         <!--Rdcipes-->
         <scene sceneID="2U8-2x-xmw">
             <objects>
@@ -115,12 +188,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="80B-6O-xNW">
+                            <rect key="frame" x="0.0" y="154.33333587646484" width="390" height="28.666666666666686"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lme-Yg-ipA" customClass="TableViewCell" customModule="Recipes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="390" height="64.333335876464844"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="76.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lme-Yg-ipA" id="qY2-pP-fQ5">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="64.333335876464844"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="76.333335876464844"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9XV-8m-oqa">
@@ -136,26 +216,24 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-Dt-DhL">
-                                                    <rect key="frame" x="64" y="19.666666666666671" width="294" height="25.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <rect key="frame" x="64" y="18" width="294" height="28.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.41568627450980389" green="0.83921568627450982" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="W1C-Dt-DhL" secondAttribute="trailing" constant="24" id="AYz-Iz-smY"/>
-                                                <constraint firstItem="X3G-M5-Lbs" firstAttribute="leading" secondItem="9XV-8m-oqa" secondAttribute="leading" constant="24" id="V7D-Ca-aI1"/>
-                                                <constraint firstItem="W1C-Dt-DhL" firstAttribute="leading" secondItem="X3G-M5-Lbs" secondAttribute="trailing" constant="24" id="XAZ-X5-BRE"/>
-                                                <constraint firstItem="W1C-Dt-DhL" firstAttribute="leading" secondItem="X3G-M5-Lbs" secondAttribute="trailing" constant="24" id="eQb-m0-HbE"/>
+                                                <constraint firstAttribute="width" secondItem="9XV-8m-oqa" secondAttribute="height" multiplier="179:32" id="K5f-b8-uvC"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="9XV-8m-oqa" secondAttribute="bottom" constant="12" id="AE6-UJ-5hJ"/>
                                         <constraint firstItem="9XV-8m-oqa" firstAttribute="top" secondItem="qY2-pP-fQ5" secondAttribute="top" id="J3K-Pl-rL9"/>
                                         <constraint firstAttribute="trailing" secondItem="9XV-8m-oqa" secondAttribute="trailing" constant="16" id="P8q-u5-iMF"/>
-                                        <constraint firstAttribute="bottom" secondItem="9XV-8m-oqa" secondAttribute="bottom" id="VcI-ci-lSA"/>
                                         <constraint firstItem="9XV-8m-oqa" firstAttribute="leading" secondItem="qY2-pP-fQ5" secondAttribute="leading" constant="16" id="ocd-bc-M1U"/>
+                                        <constraint firstAttribute="bottom" secondItem="9XV-8m-oqa" secondAttribute="bottom" constant="12" id="vSU-Hc-4iQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,6 +272,7 @@
                         <segue destination="LDd-PC-6Ja" kind="relationship" relationship="viewControllers" id="h6D-Xs-RVh"/>
                         <segue destination="2ir-eL-eTS" kind="relationship" relationship="viewControllers" id="NE9-u3-PdQ"/>
                         <segue destination="9L4-9n-Eea" kind="relationship" relationship="viewControllers" id="9cs-FF-0QT"/>
+                        <segue destination="h6l-H8-eQh" kind="relationship" relationship="viewControllers" id="QBl-1X-4ds"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="af9-wq-Yau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -207,5 +286,9 @@
         <image name="favorites" width="24" height="24"/>
         <image name="list" width="24" height="24"/>
         <image name="recipes" width="24" height="24"/>
+        <image name="salads" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

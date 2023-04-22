@@ -12,7 +12,9 @@ class RecipesViewController: UITableViewController {
     var categories = Categorie.getCategories()
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        tableView.rowHeight = 104
     }
 
     // MARK: - Table view data source
@@ -33,10 +35,14 @@ class RecipesViewController: UITableViewController {
 //        return cell
 //    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
               let categorie = categories[indexPath.row]
-        cell.textLabel?.text = categorie.name
+              cell.categoryNameLabel.text = categorie.name
+        //cell.categoryImg = UIImageView(image: "")
+        
            return cell
+                
+            
     }
     
     
