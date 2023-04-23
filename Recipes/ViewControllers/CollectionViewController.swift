@@ -7,18 +7,12 @@
 
 import UIKit
 
-private let reuseIdentifier = "cell"
-
 class CollectionViewController: UICollectionViewController {
     
     var categories = Categorie.getCategories()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        
     }
 
     /*
@@ -35,23 +29,31 @@ class CollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        categories.count
+        1
         
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-    
-        return 1
+        categories.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as? TestCollectionViewCell else { return UICollectionViewCell () }
         let categorie = categories[indexPath.row]
-//        cell.categoryNameLabel.text = categorie.name
+
+        let gradient = CAGradientLayer()
+        gradient.frame = cell.bounds
+        gradient.colors = [categorie.gradient.startColor, categorie.gradient.endColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        cell.layer.insertSublayer(gradient, at: 0)
+
+        cell.collectionLabel.text = categorie.name
         cell.layer.cornerRadius = 6
-        
+        cell.collectionImg.image = UIImage(named: categorie.img)
+
         return cell
     }
 

@@ -16,9 +16,9 @@
 		5A06221029EEC8C200A5F17A /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06220F29EEC8C200A5F17A /* Recipes.swift */; };
 		5A06221429EECD2400A5F17A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06221329EECD2400A5F17A /* DataStore.swift */; };
 		5A06221729EF0B2100A5F17A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06221629EF0B2100A5F17A /* Categories.swift */; };
-		5A822B6529F48AC000121196 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A822B6429F48AC000121196 /* CollectionViewCell.swift */; };
-		5A89DA6329F42EEF00936AFA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89DA6229F42EEF00936AFA /* TableViewCell.swift */; };
 		5A89DA6729F47C1800936AFA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89DA6629F47C1800936AFA /* CollectionViewController.swift */; };
+		5ACB3F9F29F4941700B2271D /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB3F9E29F4941700B2271D /* TestCollectionViewCell.swift */; };
+		5ACB3FA329F548D100B2271D /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB3FA229F548D100B2271D /* ShoppingListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		5A06220F29EEC8C200A5F17A /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		5A06221329EECD2400A5F17A /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		5A06221629EF0B2100A5F17A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		5A822B6429F48AC000121196 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		5A89DA6229F42EEF00936AFA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		5A89DA6629F47C1800936AFA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		5ACB3F9E29F4941700B2271D /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ACB3FA229F548D100B2271D /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 		5A89DA6129F42EC100936AFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5A89DA6229F42EEF00936AFA /* TableViewCell.swift */,
-				5A822B6429F48AC000121196 /* CollectionViewCell.swift */,
+				5ACB3F9E29F4941700B2271D /* TestCollectionViewCell.swift */,
+				5ACB3FA229F548D100B2271D /* ShoppingListTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,12 +190,12 @@
 			files = (
 				5A06221029EEC8C200A5F17A /* Recipes.swift in Sources */,
 				5A06221729EF0B2100A5F17A /* Categories.swift in Sources */,
-				5A822B6529F48AC000121196 /* CollectionViewCell.swift in Sources */,
 				5A06221429EECD2400A5F17A /* DataStore.swift in Sources */,
+				5ACB3F9F29F4941700B2271D /* TestCollectionViewCell.swift in Sources */,
 				5A06220D29EEC79C00A5F17A /* RecipesViewController.swift in Sources */,
+				5ACB3FA329F548D100B2271D /* ShoppingListTableViewController.swift in Sources */,
 				5A89DA6729F47C1800936AFA /* CollectionViewController.swift in Sources */,
 				5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */,
-				5A89DA6329F42EEF00936AFA /* TableViewCell.swift in Sources */,
 				5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
