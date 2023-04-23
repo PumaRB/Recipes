@@ -12,7 +12,6 @@
 		5A06220029EABAF400A5F17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0621FE29EABAF400A5F17A /* Main.storyboard */; };
 		5A06220229EABAF600A5F17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A06220129EABAF600A5F17A /* Assets.xcassets */; };
 		5A06220529EABAF600A5F17A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A06220329EABAF600A5F17A /* LaunchScreen.storyboard */; };
-		5A06220D29EEC79C00A5F17A /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06220C29EEC79C00A5F17A /* RecipesViewController.swift */; };
 		5A06221029EEC8C200A5F17A /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06220F29EEC8C200A5F17A /* Recipes.swift */; };
 		5A06221429EECD2400A5F17A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06221329EECD2400A5F17A /* DataStore.swift */; };
 		5A06221729EF0B2100A5F17A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06221629EF0B2100A5F17A /* Categories.swift */; };
@@ -29,7 +28,6 @@
 		5A06220129EABAF600A5F17A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A06220429EABAF600A5F17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A06220629EABAF600A5F17A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A06220C29EEC79C00A5F17A /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		5A06220F29EEC8C200A5F17A /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		5A06221329EECD2400A5F17A /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		5A06221629EF0B2100A5F17A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				5A89DA6629F47C1800936AFA /* CollectionViewController.swift */,
-				5A06220C29EEC79C00A5F17A /* RecipesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				5A06221729EF0B2100A5F17A /* Categories.swift in Sources */,
 				5A06221429EECD2400A5F17A /* DataStore.swift in Sources */,
 				5ACB3F9F29F4941700B2271D /* TestCollectionViewCell.swift in Sources */,
-				5A06220D29EEC79C00A5F17A /* RecipesViewController.swift in Sources */,
 				5ACB3FA329F548D100B2271D /* ShoppingListTableViewController.swift in Sources */,
 				5A89DA6729F47C1800936AFA /* CollectionViewController.swift in Sources */,
 				5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */,
