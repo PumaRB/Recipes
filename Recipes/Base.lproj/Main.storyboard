@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-477" y="778"/>
         </scene>
-        <!--Recipes-->
+        <!--Shopping list-->
         <scene sceneID="lvN-wb-BBf">
             <objects>
-                <tableViewController title="Recipes" id="9L4-9n-Eea" customClass="ShoppingListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Shopping list" id="9L4-9n-Eea" customClass="ShoppingListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pT9-zy-XrZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +63,9 @@
                             <outlet property="delegate" destination="9L4-9n-Eea" id="m1W-Nx-knv"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Shopping list" image="list" id="VGe-WV-l5o"/>
+                    <tabBarItem key="tabBarItem" title="Shopping list" image="list" id="VGe-WV-l5o">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Shopping List" largeTitleDisplayMode="always" id="Rsc-ki-M0Z"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
@@ -93,7 +96,9 @@
                             <outlet property="delegate" destination="2ir-eL-eTS" id="6cl-XZ-rfE"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="tmv-nZ-U5v"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="tmv-nZ-U5v">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GP-0t-DME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,29 +113,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LmA-MU-oYi">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="LmA-MU-oYi">
                             <size key="itemSize" width="360" height="128"/>
-                            <size key="estimatedItemSize" width="360" height="128"/>
+                            <size key="estimatedItemSize" width="360" height="106"/>
                             <size key="headerReferenceSize" width="32" height="0.0"/>
                             <size key="footerReferenceSize" width="32" height="0.0"/>
                             <inset key="sectionInset" minX="16" minY="12" maxX="16" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="card" id="BrQ-g5-5jd" customClass="TestCollectionViewCell" customModule="Recipes" customModuleProvider="target">
-                                <rect key="frame" x="16" y="12" width="358" height="128"/>
+                                <rect key="frame" x="16" y="12" width="358" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SFQ-3z-gPe" userLabel="tile" customClass="TestCollectionViewCell" customModule="Recipes" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="106"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RL-Gg-zgJ">
-                                            <rect key="frame" x="113.00000000000001" y="50.333333333333336" width="58.666666666666671" height="27.666666666666664"/>
+                                            <rect key="frame" x="113.00000000000001" y="39.333333333333336" width="58.666666666666671" height="27.666666666666664"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salads" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-D3-cXV">
-                                            <rect key="frame" x="25" y="32" width="64" height="64"/>
+                                            <rect key="frame" x="25" y="21" width="64" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Esx-qS-kZB"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Raz-LD-z6R"/>
@@ -147,10 +152,11 @@
                                         <constraint firstItem="2RL-Gg-zgJ" firstAttribute="leading" secondItem="vTr-D3-cXV" secondAttribute="trailing" constant="24" id="dUH-d8-rj9"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="358" height="128"/>
+                                <size key="customSize" width="358" height="106"/>
                                 <connections>
                                     <outlet property="collectionImg" destination="vTr-D3-cXV" id="bNf-Tk-Ngh"/>
                                     <outlet property="collectionLabel" destination="2RL-Gg-zgJ" id="sqZ-BT-Ygx"/>
+                                    <segue destination="Eld-I1-ECu" kind="show" id="tFM-8s-KiN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -167,12 +173,43 @@
                             <outlet property="delegate" destination="h6l-H8-eQh" id="zig-Pu-pu8"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Recipes" image="recipes" id="jOi-4H-6ob"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="recipes" id="jOi-4H-6ob">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnI-dj-QOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-448" y="1617"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="bjB-4F-2mI">
+            <objects>
+                <tableViewController id="Eld-I1-ECu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CzD-iH-dXw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="60P-Lu-8aV">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="60P-Lu-8aV" id="Czj-Mb-fbZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eld-I1-ECu" id="ajB-vx-y6U"/>
+                            <outlet property="delegate" destination="Eld-I1-ECu" id="pni-WD-Wgr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bqx-Gm-Ph9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPM-M9-6q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="2303"/>
         </scene>
         <!--Title-->
         <scene sceneID="C7F-W4-ywM">
@@ -204,5 +241,8 @@
         <image name="list" width="24" height="24"/>
         <image name="recipes" width="24" height="24"/>
         <image name="salads" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
