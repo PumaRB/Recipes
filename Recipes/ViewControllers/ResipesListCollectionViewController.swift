@@ -43,7 +43,7 @@ class ResipesListCollectionViewController: UICollectionViewController {
         
         let recipe = recipes[indexPath.row]
         cell.recipeImg.image = UIImage(named: recipe.img)
-        
+        cell.layer.cornerRadius = 12
         return cell
     }
     
@@ -58,8 +58,9 @@ class ResipesListCollectionViewController: UICollectionViewController {
 extension ResipesListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = 271
-        return CGSize(width: collectionView.frame.width / 2 - 24, height: CGFloat(height))
+        let width = collectionView.frame.width / 2 - 24
+        let height = width * 1.5
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
