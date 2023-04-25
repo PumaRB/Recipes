@@ -201,36 +201,27 @@
         <scene sceneID="OVl-4A-cje">
             <objects>
                 <collectionViewController id="G7t-TT-xpr" customClass="ResipesListCollectionViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lbi-Ny-lcy" customClass="RecipesCollectionView" customModule="Recipes" customModuleProvider="target">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="lbi-Ny-lcy" customClass="RecipesCollectionView" customModule="Recipes" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hU6-vw-BIZ">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hU6-vw-BIZ">
                             <size key="itemSize" width="171" height="241"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <stackView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="SvC-rz-jKh">
-                            <rect key="frame" x="0.0" y="-91" width="390" height="844"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-Dj-HKM">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                    <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </stackView>
-                            </subviews>
-                        </stackView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="Cne-QO-Jee" customClass="RecipesCollectionViewCell" customModule="Recipes" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="card" id="Cne-QO-Jee" customClass="RecipesCollectionViewCell" customModule="Recipes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="171" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d0F-R8-R57">
                                     <rect key="frame" x="0.0" y="0.0" width="171" height="271"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1" image="christmas salad" translatesAutoresizingMaskIntoConstraints="NO" id="QKM-SE-pRd">
-                                            <rect key="frame" x="0.0" y="26" width="171" height="245"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="QKM-SE-pRd">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="271"/>
+                                            <color key="backgroundColor" red="0.1333333333" green="1" blue="0.99531155819999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pTT-KD-16v">
                                             <rect key="frame" x="0.0" y="207" width="171" height="64"/>
@@ -304,18 +295,22 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="pTT-KD-16v" firstAttribute="leading" secondItem="QKM-SE-pRd" secondAttribute="leading" id="H2d-XD-5ID"/>
+                                        <constraint firstItem="QKM-SE-pRd" firstAttribute="top" secondItem="d0F-R8-R57" secondAttribute="top" id="EzQ-qi-fIE"/>
                                         <constraint firstAttribute="bottom" secondItem="pTT-KD-16v" secondAttribute="bottom" id="R3C-3h-XIz"/>
-                                        <constraint firstItem="pTT-KD-16v" firstAttribute="trailing" secondItem="QKM-SE-pRd" secondAttribute="trailing" id="X5K-GY-QvR"/>
+                                        <constraint firstItem="QKM-SE-pRd" firstAttribute="leading" secondItem="d0F-R8-R57" secondAttribute="leading" id="XIc-c4-2JP"/>
                                         <constraint firstAttribute="trailing" secondItem="pTT-KD-16v" secondAttribute="trailing" id="c03-T9-cLZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="QKM-SE-pRd" secondAttribute="trailing" id="dUv-Tp-dHY"/>
                                         <constraint firstItem="pTT-KD-16v" firstAttribute="leading" secondItem="d0F-R8-R57" secondAttribute="leading" id="n6G-tl-hbZ"/>
-                                        <constraint firstItem="pTT-KD-16v" firstAttribute="bottom" secondItem="QKM-SE-pRd" secondAttribute="bottom" id="rjY-MB-pMA"/>
+                                        <constraint firstAttribute="bottom" secondItem="QKM-SE-pRd" secondAttribute="bottom" id="nxH-Jz-d9K"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="171" height="271"/>
                                 <connections>
+                                    <outlet property="recipeDifficultyImg" destination="jv5-Y3-6XG" id="8iG-KG-D6Z"/>
+                                    <outlet property="recipeDifficultyLabel" destination="vQH-fi-OrJ" id="B1N-9V-nIO"/>
                                     <outlet property="recipeImg" destination="QKM-SE-pRd" id="iW0-bQ-3R2"/>
-                                    <outlet property="recipeName" destination="Q2B-FN-6g8" id="K3g-au-YDC"/>
+                                    <outlet property="recipeNameLabel" destination="Q2B-FN-6g8" id="bCy-vo-Lw9"/>
+                                    <outlet property="recipeTimeLabel" destination="o0Z-Oa-TDh" id="86o-iI-fiH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -356,7 +351,6 @@
     </scenes>
     <color key="tintColor" red="0.43152325410826137" green="0.86679292929292928" blue="0.83941683825356406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
-        <image name="christmas salad" width="174" height="245"/>
         <image name="easy1" width="16" height="16"/>
         <image name="favorites" width="24" height="24"/>
         <image name="list" width="24" height="24"/>

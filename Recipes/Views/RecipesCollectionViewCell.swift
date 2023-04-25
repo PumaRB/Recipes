@@ -8,7 +8,9 @@
 import UIKit
 
 class RecipesCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet var recipeImg: UIImageView!
-    @IBOutlet var recipeName: UILabel!
+    @IBOutlet var recipeNameLabel: UILabel!
+    @IBOutlet var recipeTimeLabel: UILabel!
+    @IBOutlet var recipeDifficultyImg: UIImageView!
+    @IBOutlet var recipeDifficultyLabel: UILabel!
 }
