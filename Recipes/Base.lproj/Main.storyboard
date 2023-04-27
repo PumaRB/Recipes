@@ -146,7 +146,7 @@
                                 <connections>
                                     <outlet property="collectionImg" destination="vTr-D3-cXV" id="bNf-Tk-Ngh"/>
                                     <outlet property="collectionLabel" destination="2RL-Gg-zgJ" id="sqZ-BT-Ygx"/>
-                                    <segue destination="G7t-TT-xpr" kind="show" id="5d2-zC-cxa"/>
+                                    <segue destination="G7t-TT-xpr" kind="show" identifier="showRecipes" id="5d2-zC-cxa"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -287,7 +287,7 @@
                                     <outlet property="recipeImg" destination="QKM-SE-pRd" id="iW0-bQ-3R2"/>
                                     <outlet property="recipeNameLabel" destination="Q2B-FN-6g8" id="bCy-vo-Lw9"/>
                                     <outlet property="recipeTimeLabel" destination="o0Z-Oa-TDh" id="86o-iI-fiH"/>
-                                    <segue destination="Phc-jB-59Y" kind="show" id="wZf-O5-QMs"/>
+                                    <segue destination="Phc-jB-59Y" kind="show" identifier="showRecipeDetais" id="wZf-O5-QMs"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -310,7 +310,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-3j-Qgg">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-3j-Qgg">
                                 <rect key="frame" x="16" y="159" width="358" height="236"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ust-0t-3a0" userLabel="Description Stack View ">
@@ -361,7 +361,7 @@
                                             <constraint firstAttribute="height" constant="32" id="U7c-Wm-Cvc"/>
                                         </constraints>
                                     </stackView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hl5-gP-mYE">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hl5-gP-mYE">
                                         <rect key="frame" x="0.0" y="44" width="358" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V3K-F2-L36">
@@ -398,7 +398,7 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sih-Y1-BdV">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sih-Y1-BdV">
                                         <rect key="frame" x="0.0" y="184" width="358" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="ZCe-s5-mWA"/>
@@ -418,6 +418,7 @@
                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Uge-3j-Qgg" secondAttribute="trailing" constant="16" id="75q-aV-b90"/>
+                            <constraint firstItem="cLh-I9-wUp" firstAttribute="bottom" secondItem="Uge-3j-Qgg" secondAttribute="bottom" constant="415" id="BX2-nD-vu2"/>
                             <constraint firstItem="Uge-3j-Qgg" firstAttribute="leading" secondItem="cLh-I9-wUp" secondAttribute="leading" constant="16" id="Xdx-a0-80U"/>
                             <constraint firstItem="Uge-3j-Qgg" firstAttribute="top" secondItem="cLh-I9-wUp" secondAttribute="top" constant="16" id="hUM-NU-RjA"/>
                         </constraints>

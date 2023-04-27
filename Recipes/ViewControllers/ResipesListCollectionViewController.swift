@@ -10,7 +10,7 @@ import UIKit
 
 class ResipesListCollectionViewController: UICollectionViewController {
     
-    var recipes = Recipe.getRecipe()
+    var category: Categorie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,21 +29,20 @@ class ResipesListCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
+       1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        recipes.count
+        category?.recipes.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as? RecipesCollectionViewCell else { return UICollectionViewCell () }
-        
-        let recipe = recipes[indexPath.row]
-        cell.recipeImg.image = UIImage(named: recipe.img)
-        cell.recipeNameLabel.text = recipe.name
-        cell.recipeTimeLabel.text = recipe.time
+        let recipes = category?.recipes[indexPath.row]
+//        cell.recipeImg.image = UIImage(named: recipe.img)
+        cell.recipeNameLabel.text = recipes?.name
+//        cell.recipeTimeLabel.text = recipe.time
         cell.layer.cornerRadius = 12
         return cell
     }

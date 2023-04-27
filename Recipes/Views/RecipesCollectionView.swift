@@ -4,9 +4,9 @@
 //
 //  Created by Rimma Katushina on 24/04/2023.
 //
-
-import UIKit
-
-class RecipesCollectionView: UICollectionView {
- 
-}
+//
+//import UIKit
+//
+//class RecipesCollectionView: UICollectionView {
+//
+//}
