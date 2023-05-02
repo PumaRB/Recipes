@@ -9,21 +9,13 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
     
-    var categories = Categorie.getCategories()
+    var categories = CategorisContent.getCategories()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
+  
      // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let recipesList = segue.destination as?
-//            ResipesListCollectionViewController, let index = collectionView.indexPathsForSelectedItems?.first {
-//            recipesList.recipes = categories[indexPath.row]
-//        }
-//        }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {return}
@@ -31,19 +23,14 @@ class CollectionViewController: UICollectionViewController {
         recipesList.category = categories[indexPath.item]
         }
 
-
-
     // MARK: - UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         1
         
     }
-    
-    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         categories.count
     }
     

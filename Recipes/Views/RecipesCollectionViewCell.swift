@@ -13,4 +13,5 @@ class RecipesCollectionViewCell: UICollectionViewCell {
     @IBOutlet var recipeTimeLabel: UILabel!
     @IBOutlet var recipeDifficultyImg: UIImageView!
     @IBOutlet var recipeDifficultyLabel: UILabel!
+    var recipe: Recipe?
 }
