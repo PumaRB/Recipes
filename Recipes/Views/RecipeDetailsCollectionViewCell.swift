@@ -8,6 +8,7 @@
 import UIKit
 
 class RecipeDetailsCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var stepNameLabel: UILabel!
+
+    @IBOutlet var stepName: UILabel!
     @IBOutlet var stepDescrioptionLabel: UILabel!
 }

@@ -27,7 +27,6 @@
 		5AF023F129FC4EF7006F44AD /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF023F029FC4EF7006F44AD /* Step.swift */; };
 		5AF023F32A00403F006F44AD /* IngridientsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF023F22A00403F006F44AD /* IngridientsContent.swift */; };
 		5AF023F52A0040F2006F44AD /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF023F42A0040F2006F44AD /* Ingridient.swift */; };
-		5AF023F72A015884006F44AD /* DetailsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF023F62A015884006F44AD /* DetailsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,6 @@
 		5AF023F029FC4EF7006F44AD /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		5AF023F22A00403F006F44AD /* IngridientsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsContent.swift; sourceTree = "<group>"; };
 		5AF023F42A0040F2006F44AD /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
-		5AF023F62A015884006F44AD /* DetailsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 			children = (
 				5A89DA6629F47C1800936AFA /* CollectionViewController.swift */,
 				5A4C98BD29F5AFF80089D250 /* ResipesListCollectionViewController.swift */,
-				5AF023F62A015884006F44AD /* DetailsCollectionViewController.swift */,
 				5AF023E329FC2669006F44AD /* RecipeDetailsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -234,7 +231,6 @@
 				5AF023E629FC2864006F44AD /* RecipeDetailsView.swift in Sources */,
 				5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */,
 				5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */,
-				5AF023F72A015884006F44AD /* DetailsCollectionViewController.swift in Sources */,
 				5AF023F32A00403F006F44AD /* IngridientsContent.swift in Sources */,
 				5AF023EB29FC4D5A006F44AD /* Category.swift in Sources */,
 			);
