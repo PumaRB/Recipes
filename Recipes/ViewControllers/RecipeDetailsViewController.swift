@@ -23,6 +23,7 @@ class RecipeDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = recipe?.name
     }
     
 }
@@ -35,8 +36,15 @@ extension RecipeDetailsViewController: UITableViewDataSource, UITableViewDelegat
 
         let steps = recipe?.steps[indexPath.row]
         var content = cell.defaultContentConfiguration()
+        
         content.text = steps?.header
+        content.textProperties.color = UIColor.init(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
+        content.textProperties.font = UIFont.boldSystemFont(ofSize: 24)
+        
         content.secondaryText = steps?.description
+        content.secondaryTextProperties.color = UIColor.init(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
+        content.secondaryTextProperties.font = UIFont.systemFont(ofSize: 17)
+        
         cell.contentConfiguration = content
         cell.backgroundColor = UIColor.init(red: 0.125, green: 0.125, blue: 0.125, alpha: 1)
         
