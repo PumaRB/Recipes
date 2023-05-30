@@ -17,6 +17,7 @@ class IngridientsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = .white
+        tableView.rowHeight = 79
         addIngridiendToListOutlet.layer.cornerRadius = 10
         setupStatusButton()
     }
@@ -37,12 +38,51 @@ class IngridientsTableViewController: UIViewController {
     // MARK: - Table view data source
 
     @IBAction func addIngridiendToListAction() {
+        
         switch addIngridiendToListOutlet.tag {
-        case 0: shoppingList = recipe?.ingridientList ?? []
-        case 1: shoppingList.removeAll()
+        case 0:
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            
+            let attribTitle = NSAttributedString(string: "You can only add one recipe to your shopping list.", attributes: [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 17)])
+            let  attribMessage = NSAttributedString(string: "Remove the Mac’n cheese from the shopping list and add Christmas salad instead?", attributes: [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 17)])
+            
+            alert.setValue(attribTitle, forKey: "attributedTitle")
+            alert.setValue(attribMessage, forKey: "attributedMessage")
+            
+            alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor(red: 0.171, green: 0.171, blue: 0.171, alpha: 1)
+            alert.view.tintColor = .white            
+            
+            let add = UIAlertAction(title: "Add recipe", style: .default) {[unowned self] _ in
+                shoppingList = recipe?.ingridientList ?? []
+                setupStatusButton()
+            }
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            
+            alert.addAction(add)
+            alert.addAction(cancel)
+            present(alert, animated: true)
+        case 1:
+            let alertRemove = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            
+            let attribTitle = NSAttributedString(string: "Do you want to clear shopping list?", attributes: [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 17)])
+            
+            alertRemove.setValue(attribTitle, forKey: "attributedTitle")
+            alertRemove.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor(red: 0.171, green: 0.171, blue: 0.171, alpha: 1)
+            alertRemove.view.tintColor = .white
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            let clear = UIAlertAction(title: "Clear", style: .default) { [unowned self] _ in
+                shoppingList.removeAll()
+                setupStatusButton()
+            }
+            
+            alertRemove.addAction(cancel)
+            alertRemove.addAction(clear)
+            
+            present(alertRemove, animated: true)
+
         default: break
         }
-        setupStatusButton()
     }
 }
 
