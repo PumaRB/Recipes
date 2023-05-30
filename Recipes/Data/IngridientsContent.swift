@@ -15,3 +15,4 @@ class IngridientContent {
     }
 }
 
+var shoppingList: [Ingridient] = []
