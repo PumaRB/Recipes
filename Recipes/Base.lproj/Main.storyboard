@@ -10,22 +10,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Shopping list -->
         <scene sceneID="3Ma-oI-XoY">
             <objects>
-                <tableViewController id="MV1-ap-z4j" sceneMemberID="viewController">
+                <tableViewController id="MV1-ap-z4j" customClass="ShoppingListViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4pO-LH-Jev">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="meh-ru-3jV">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingListCell" rowHeight="78" id="meh-ru-3jV" customClass="ShoppingListViewCell" customModule="Recipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="meh-ru-3jV" id="RB6-Ec-p1o">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIC-lR-hOu">
+                                            <rect key="frame" x="16" y="24" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="AtV-qS-tLv"/>
+                                                <constraint firstAttribute="height" constant="30" id="V2e-8G-qo3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rat-k3-D5V">
+                                            <rect key="frame" x="62" y="28.666666666666671" width="229" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-h5-hfo">
+                                            <rect key="frame" x="311" y="28.666666666666671" width="63" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="63" id="VGL-xN-ef3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="R5t-h5-hfo" firstAttribute="leading" secondItem="rat-k3-D5V" secondAttribute="trailing" constant="20" id="1ct-eO-oc9"/>
+                                        <constraint firstItem="rat-k3-D5V" firstAttribute="centerY" secondItem="RB6-Ec-p1o" secondAttribute="centerY" id="73P-pi-BYv"/>
+                                        <constraint firstItem="RIC-lR-hOu" firstAttribute="leading" secondItem="RB6-Ec-p1o" secondAttribute="leading" constant="16" id="AV8-zt-GvC"/>
+                                        <constraint firstAttribute="trailing" secondItem="R5t-h5-hfo" secondAttribute="trailing" constant="16" id="Duc-h7-3yQ"/>
+                                        <constraint firstItem="RIC-lR-hOu" firstAttribute="centerY" secondItem="RB6-Ec-p1o" secondAttribute="centerY" id="RhW-hh-BIO"/>
+                                        <constraint firstItem="R5t-h5-hfo" firstAttribute="centerY" secondItem="RB6-Ec-p1o" secondAttribute="centerY" id="V04-d2-blY"/>
+                                        <constraint firstItem="rat-k3-D5V" firstAttribute="leading" secondItem="RIC-lR-hOu" secondAttribute="trailing" constant="16" id="bjL-dC-wCx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="background"/>
+                                <connections>
+                                    <outlet property="ingridiendCount" destination="R5t-h5-hfo" id="vrV-aK-kJr"/>
+                                    <outlet property="ingridiendImage" destination="RIC-lR-hOu" id="Rrz-xh-ohE"/>
+                                    <outlet property="ingridiendName" destination="rat-k3-D5V" id="HpB-WO-vL5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,19 +72,26 @@
                             <outlet property="delegate" destination="MV1-ap-z4j" id="SzL-WZ-BAA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kAh-rl-F70"/>
+                    <navigationItem key="navigationItem" title="Shopping list " largeTitleDisplayMode="always" id="kAh-rl-F70">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="xIL-Sh-BGh">
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="deleteShoppingList:" destination="MV1-ap-z4j" id="6Dh-7z-Vyq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8co-Ug-Pqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="2111"/>
+            <point key="canvasLocation" x="1207.6923076923076" y="2110.6635071090045"/>
         </scene>
         <!--Shopping list-->
         <scene sceneID="1LL-J4-qI9">
             <objects>
-                <navigationController title="Shopping list" id="FJ7-H5-NmV" sceneMemberID="viewController">
+                <navigationController title="Shopping list" toolbarHidden="NO" id="FJ7-H5-NmV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shopping List" image="list" id="Kha-RX-d0N"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gsz-bg-fxp">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gsz-bg-fxp">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -559,6 +605,7 @@
         <image name="recipes" width="24" height="24"/>
         <image name="salads" width="64" height="64"/>
         <image name="time" width="16" height="16"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="background">
             <color red="0.125" green="0.125" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -574,8 +621,8 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

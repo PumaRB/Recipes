@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IngridientsTableViewController: UIViewController {
+final class IngridientsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addIngridiendToListOutlet: UIButton!
@@ -17,28 +17,29 @@ class IngridientsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = .white
-        tableView.rowHeight = 79
+        tableView.rowHeight = 78
         addIngridiendToListOutlet.layer.cornerRadius = 10
         setupStatusButton()
     }
     
     func setupStatusButton() {
-        if shoppingList.isEmpty {
-            addIngridiendToListOutlet.setTitle("Add to a shopping list", for: .normal)
-            addIngridiendToListOutlet.backgroundColor = UIColor(red: 0.028, green: 0.521, blue: 0.462, alpha: 1)
-            addIngridiendToListOutlet.tag = 0
-        }
-        else {
+        print(shoppingList)
+        print(recipe)
+        if shoppingList?.name == recipe?.name {
             addIngridiendToListOutlet.setTitle("Remove from a shopping list", for: .normal)
             addIngridiendToListOutlet.backgroundColor = UIColor(red: 0.775, green: 0.32, blue: 0.22, alpha: 1)
             addIngridiendToListOutlet.tag = 1
+        } else {
+            addIngridiendToListOutlet.setTitle("Add to a shopping list", for: .normal)
+            addIngridiendToListOutlet.backgroundColor = UIColor(red: 0.028, green: 0.521, blue: 0.462, alpha: 1)
+            addIngridiendToListOutlet.tag = 0
         }
     }
 
     // MARK: - Table view data source
 
     @IBAction func addIngridiendToListAction() {
-        
+                
         switch addIngridiendToListOutlet.tag {
         case 0:
             let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
@@ -53,7 +54,9 @@ class IngridientsTableViewController: UIViewController {
             alert.view.tintColor = .white            
             
             let add = UIAlertAction(title: "Add recipe", style: .default) {[unowned self] _ in
-                shoppingList = recipe?.ingridientList ?? []
+                if let recipe = recipe {
+                    shoppingList = .init(recipe: recipe)
+                }
                 setupStatusButton()
             }
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
@@ -72,7 +75,7 @@ class IngridientsTableViewController: UIViewController {
             
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             let clear = UIAlertAction(title: "Clear", style: .default) { [unowned self] _ in
-                shoppingList.removeAll()
+                shoppingList = nil
                 setupStatusButton()
             }
             
@@ -101,6 +104,7 @@ extension IngridientsTableViewController: UITableViewDelegate, UITableViewDataSo
         
         content.text = ingridient?.ingridientName
         content.secondaryText = ingridient?.ingridientCount
+        
         
         cell.contentConfiguration = content
         return cell

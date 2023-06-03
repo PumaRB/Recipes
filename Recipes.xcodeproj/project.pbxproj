@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A9ED2D32A29247900D39DD0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */; };
+		4A9ED2D72A2A817F00D39DD0 /* ShoppingListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9ED2D62A2A817F00D39DD0 /* ShoppingListViewCell.swift */; };
 		5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0621F829EABAF400A5F17A /* AppDelegate.swift */; };
 		5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0621FA29EABAF400A5F17A /* SceneDelegate.swift */; };
 		5A06220029EABAF400A5F17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0621FE29EABAF400A5F17A /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		4A9ED2D62A2A817F00D39DD0 /* ShoppingListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewCell.swift; sourceTree = "<group>"; };
 		5A0621F529EABAF400A5F17A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0621F829EABAF400A5F17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0621FA29EABAF400A5F17A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				5A4C98BD29F5AFF80089D250 /* ResipesListCollectionViewController.swift */,
 				5AF023E329FC2669006F44AD /* RecipeDetailsViewController.swift */,
 				5A6F88CF2A02944D002404B4 /* IngridientsTableViewController.swift */,
+				4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				5A4C98C329F5B3520089D250 /* RecipesCollectionViewCell.swift */,
 				5AF023E529FC2864006F44AD /* RecipeDetailsView.swift */,
 				5ACB3F9E29F4941700B2271D /* TestCollectionViewCell.swift */,
+				4A9ED2D62A2A817F00D39DD0 /* ShoppingListViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				5AF023E829FC4BC9006F44AD /* RecipesContent.swift in Sources */,
 				5AF023E629FC2864006F44AD /* RecipeDetailsView.swift in Sources */,
 				5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */,
+				4A9ED2D72A2A817F00D39DD0 /* ShoppingListViewCell.swift in Sources */,
+				4A9ED2D32A29247900D39DD0 /* ShoppingListViewController.swift in Sources */,
 				5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */,
 				5AF023F32A00403F006F44AD /* IngridientsContent.swift in Sources */,
 				5AF023EB29FC4D5A006F44AD /* Category.swift in Sources */,
