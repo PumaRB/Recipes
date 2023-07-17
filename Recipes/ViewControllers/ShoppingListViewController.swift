@@ -9,14 +9,16 @@ import UIKit
 
 final class ShoppingListViewController: UITableViewController {
 
+    @IBOutlet weak var deleteButtonOutlet: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorColor = .white
+        tableView.separatorColor = UIColor(named: "main")
         tableView.rowHeight = 78
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        reloadView()
     }
     
     @IBAction func deleteShoppingList(_ sender: UIBarButtonItem) {
@@ -26,7 +28,7 @@ final class ShoppingListViewController: UITableViewController {
         let alertDelete = UIAlertController(title: "", message: "", preferredStyle: .alert)
         let delete = UIAlertAction(title: "Clear", style: .destructive) { _ in
             shoppingList = nil
-            self.tableView.reloadData()
+            self.reloadView()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
         
@@ -57,9 +59,16 @@ final class ShoppingListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
         shoppingList?.ingridientList[indexPath.row].isCheck.toggle()
         tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+}
+
+extension ShoppingListViewController {
+    private func reloadView() {
+        tableView.reloadData()
+        deleteButtonOutlet.isHidden = shoppingList?.ingridientList.isEmpty ?? true
     }
 }
 

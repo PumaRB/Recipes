@@ -14,6 +14,9 @@ class ShoppingListViewCell: UITableViewCell {
     @IBOutlet weak var ingridiendCount: UILabel!
     
     func configure(ingridiend: IngridientForShopping) {
+        
+        self.selectionStyle = .none
+        
         ingridiendName.text = ingridiend.ingridiendName
         ingridiendCount.text = ingridiend.ingridiendCount
         ingridiendImage.image = ingridiend.isCheck ? UIImage(named: "checkboxTrue") : UIImage(named: "checkboxFalse")

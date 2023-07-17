@@ -80,6 +80,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="deleteButtonOutlet" destination="xIL-Sh-BGh" id="fxf-aS-wSu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8co-Ug-Pqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +96,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gsz-bg-fxp">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="main"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="MV1-ap-z4j" kind="relationship" relationship="rootViewController" id="TdE-99-dMa"/>
@@ -115,6 +121,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qha-3Z-eqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149" y="1329"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Z5o-VG-asq">
+            <objects>
+                <tableViewController id="7Is-UM-q1g" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eh4-8b-Buq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="M4U-Oz-CLD">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M4U-Oz-CLD" id="cF2-g3-XA5">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Is-UM-q1g" id="rSO-NS-jKP"/>
+                            <outlet property="delegate" destination="7Is-UM-q1g" id="EAW-WI-w8a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="X5v-sq-ZEC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHc-Yd-gvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="2123"/>
+        </scene>
+        <!--Developers-->
+        <scene sceneID="TcG-kH-esN">
+            <objects>
+                <navigationController id="yNR-1B-DtK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Developers" image="list" id="KFs-pG-5tA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0tU-Oq-J1s">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="main"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Is-UM-q1g" kind="relationship" relationship="rootViewController" id="fgY-fS-Hgu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7W-or-kyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="1329"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="1e9-UT-n6s">
@@ -589,6 +644,7 @@
                         <segue destination="AM0-SG-oKn" kind="relationship" relationship="viewControllers" id="6Ss-t3-D9I"/>
                         <segue destination="FJ7-H5-NmV" kind="relationship" relationship="viewControllers" id="KPG-8X-SK5"/>
                         <segue destination="46o-Kf-yFI" kind="relationship" relationship="viewControllers" id="y3V-Xn-uTO"/>
+                        <segue destination="yNR-1B-DtK" kind="relationship" relationship="viewControllers" id="bWW-zX-vey"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="af9-wq-Yau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -620,6 +676,9 @@
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
