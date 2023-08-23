@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A9ED2D32A29247900D39DD0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */; };
 		4A9ED2D72A2A817F00D39DD0 /* ShoppingListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9ED2D62A2A817F00D39DD0 /* ShoppingListViewCell.swift */; };
+		4AD44AE32A6EE67C000F5941 /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD44AE22A6EE67C000F5941 /* Developers.swift */; };
+		4AD44AE52A6EE88D000F5941 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD44AE42A6EE88D000F5941 /* DevelopersViewController.swift */; };
 		5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0621F829EABAF400A5F17A /* AppDelegate.swift */; };
 		5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0621FA29EABAF400A5F17A /* SceneDelegate.swift */; };
 		5A06220029EABAF400A5F17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0621FE29EABAF400A5F17A /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		4A9ED2D62A2A817F00D39DD0 /* ShoppingListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewCell.swift; sourceTree = "<group>"; };
+		4AD44AE22A6EE67C000F5941 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
+		4AD44AE42A6EE88D000F5941 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		5A0621F529EABAF400A5F17A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0621F829EABAF400A5F17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0621FA29EABAF400A5F17A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				5AF023E329FC2669006F44AD /* RecipeDetailsViewController.swift */,
 				5A6F88CF2A02944D002404B4 /* IngridientsTableViewController.swift */,
 				4A9ED2D22A29247900D39DD0 /* ShoppingListViewController.swift */,
+				4AD44AE42A6EE88D000F5941 /* DevelopersViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				5AF023F22A00403F006F44AD /* IngridientsContent.swift */,
 				5AF023EE29FC4E7F006F44AD /* StepsContent.swift */,
 				5AF023EC29FC4E21006F44AD /* CategoriesContent.swift */,
+				4AD44AE22A6EE67C000F5941 /* Developers.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 				5A0621F929EABAF400A5F17A /* AppDelegate.swift in Sources */,
 				4A9ED2D72A2A817F00D39DD0 /* ShoppingListViewCell.swift in Sources */,
 				4A9ED2D32A29247900D39DD0 /* ShoppingListViewController.swift in Sources */,
+				4AD44AE52A6EE88D000F5941 /* DevelopersViewController.swift in Sources */,
+				4AD44AE32A6EE67C000F5941 /* Developers.swift in Sources */,
 				5A0621FB29EABAF400A5F17A /* SceneDelegate.swift in Sources */,
 				5AF023F32A00403F006F44AD /* IngridientsContent.swift in Sources */,
 				5AF023EB29FC4D5A006F44AD /* Category.swift in Sources */,

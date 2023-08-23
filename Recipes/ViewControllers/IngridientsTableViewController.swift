@@ -23,8 +23,6 @@ final class IngridientsTableViewController: UIViewController {
     }
     
     func setupStatusButton() {
-        print(shoppingList)
-        print(recipe)
         if shoppingList?.name == recipe?.name {
             addIngridiendToListOutlet.setTitle("Remove from a shopping list", for: .normal)
             addIngridiendToListOutlet.backgroundColor = UIColor(red: 0.775, green: 0.32, blue: 0.22, alpha: 1)
