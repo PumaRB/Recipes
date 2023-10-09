@@ -22,7 +22,6 @@ class ResipesListCollectionViewController: UICollectionViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {return}
          guard let recipeDetails = segue.destination as? RecipeDetailsViewController else {return}
-//         let cell = sender as! RecipesCollectionViewCell
          recipeDetails.recipe = category?.recipes[indexPath.item]
      }
 
